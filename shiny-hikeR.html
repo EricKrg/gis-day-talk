@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hikeR - ease up planning</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'hikeR - ease up planning',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Eric Krüger <a href="mailto:eric.krueger@uni-jena.de">&lt;eric.krueger@uni-jena.de&gt;</a>' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            {
+        name:  '3. Fachsemester Geoinformatik' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            {
+        name:  'github.com/EricKrg' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <link href="shiny-hikeR_files/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="shiny-hikeR_files/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="shiny-hikeR_files/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="shiny-hikeR_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="shiny-slides.css" type="text/css" />
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">#GIS-Day — 14 November, 2018</p>
+          </hgroup>
+  </slide>
+
+<slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Überblick</h2></hgroup><article  id="uberblick">
+
+</article></slide><slide class=""><hgroup><h2>Inhalt</h2></hgroup><article  id="inhalt">
+
+<h3><strong>Was ist hikeR:</strong></h3>
+
+<ul class = 'build'>
+<li>hikeR Features</li>
+<li>hikeR Services</li>
+</ul>
+
+<h3><strong>Struktur der Anwendung:</strong></h3>
+
+<ul class = 'build'>
+<li>ShinyApp + R-Paket</li>
+</ul>
+
+<h3><strong>Ausblick:</strong></h3>
+
+<ul class = 'build'>
+<li>Neue Features</li>
+<li>Server + Maintaince</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features">
+
+<ul class = 'build'>
+<li><strong>Routing</strong>
+
+<ul class = 'build'>
+<li>Routing Stats.</li>
+<li>Download</li>
+<li>Anbieter/Style</li>
+</ul></li>
+<li><strong>Wetter</strong>
+
+<ul class = 'build'>
+<li>Wetter &amp; Wetterwarnungen</li>
+</ul></li>
+<li><strong>InReach</strong></li>
+<li><em>Impressions</em></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-1">
+
+<p><img src="shiny-hikeR_files/figure-html/unnamed-chunk-1-1.png" width="960" style="display: block; margin: auto;" /></p>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-2">
+
+<h3>Routing</h3>
+
+<ul class = 'build'>
+<li><strong>ORS- OpenRouteService <em>openrouteservice.org</em> </strong>
+
+<ul class = 'build'>
+<li>Heidelberg Institute for Geoinformation Technology (HeiGIT) (Entwicklung und Betreuung)</li>
+<li><em>Directions, geocode, isochrones, time-distance matrix, pois</em></li>
+<li>R-Paket: <code>openrouteserivce-r</code> - <em>github.com/GIScience/openrouteservice-r</em></li>
+</ul></li>
+<li><strong>cyclestreet <em>cyclestreets.net</em> </strong>
+
+<ul class = 'build'>
+<li>CycleStreets Ltd, a not-for-profit limited UK company - Cambridige Cycling Campaign</li>
+<li>OSM + OpenCycleMap</li>
+<li>R-Paket <code>stplanr</code> - <em><a href='https://github.com/ropensci/stplanr' title=''>https://github.com/ropensci/stplanr</a></em> -&gt; <em>Directions, geocode</em></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-3">
+
+<h3>Routing</h3>
+
+<ul class = 'build'>
+<li><em>profile ?</em>
+
+<ul class = 'build'>
+<li><strong>Fahrrad:</strong></li>
+<li>fast, balanced, quite (<em>cycle</em>)</li>
+<li>regular, safe, street, mountain (<em>ors</em>)</li>
+<li><strong>Zu Fuss:</strong></li>
+<li>hiking, walking (<em>ors</em>)</li>
+</ul></li>
+<li>als Standard auch OSM möglich</li>
+</ul>
+
+<p><code>hikeR::hike_routing(coord_list, progress, provider, profile,api)</code></p>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-4">
+
+<h3>Routing Statistik</h3>
+
+<ul class = 'build'>
+<li>Luftlinie oder berechnete Strecke</li>
+<li>Höheninformation + 3D Höhendiagramm</li>
+<li>Reisezeit</li>
+<li>Leistungskilometer:
+
+<ul class = 'build'>
+<li><code>hike_performance_km(elev_points, col, tmp_route)</code></li>
+</ul>
+
+\[LKM = Hdist+ \frac{UP}{100} + \frac{DOWN}{150}\]</li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Demo</h2></hgroup><article  id="demo">
+
+<p><strong>Routing und Routingstatistik</strong></p>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-5">
+
+<h3>Wetter und Wetterwarnungen</h3>
+
+<p><font size="4"></p>
+
+<ul class = 'build'>
+<li><strong>Einfaches Wetter:</strong>
+
+<ul class = 'build'>
+<li><code>weatherr</code> - Paket (api.met.no)</li>
+<li>weltweit verfügbare Grundwetterdaten von <em>Norwegian Meteorologisk Institutt</em></li>
+<li>Update: nach Erstellung Luftlinie, Route oder Suche</li>
+</ul></li>
+<li><strong>Wetterwarnungen:</strong></li>
+<li><pre class = 'prettyprint lang-r'>sf::st_read(
+&quot;WFS:https://maps.dwd.de/geoserver/ows?service=wfs&amp;version=2.0.0&amp;request=GetCapabilities&quot;, 
+layer = &quot;dwd:Warnungen_Gemeinden&quot;,
+quiet = T)</pre>
+
+<ul class = 'build'>
+<li>Bsp. aus <code>hikeR::hike_warnungen()</code><br/></li>
+<li>nur für Dtl., auf Gemeindeebene – Quelle WFS des DWD <em>dwd.de/DE/leistungen/geowebservice/geowebservice.html</em></li>
+</ul></li>
+</ul>
+
+<p></font></p>
+
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-6">
+
+<h3>InReach &amp; Impressionen</h3>
+
+<p><font size="4"></p>
+
+<ul class = 'build'>
+<li><strong>ORS Isochronen-Dienst</strong> (openrouteservice-r) – <a href='https://openrouteservice.org/services/' title=''>https://openrouteservice.org/services/</a></li>
+<li><pre class = 'prettyprint lang-r'>hike_iso_create &lt;- function(x,y,range,profile){
+  range &lt;- range*60
+  t &lt;- c(x,y)
+  iso &lt;- openrouteservice::ors_isochrones(t,range = range, profile = profile,
+                                          interval = range/4, range_type = &quot;time&quot;)
+  sf &lt;- hikeR::hike_iso2sf(iso)
+  return(sf)
+}</pre></li>
+<li><strong>Impressionen</strong>
+
+<ul class = 'build'>
+<li>nutzt Wikipedia + (initialen) Suchbegriff – scraped Wikidata nach .jpges &amp; .png</li>
+</ul></li>
+</ul>
+
+<p></font></p>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Demo</h2></hgroup><article  id="demo-1">
+
+<p><strong>Wetter, InReach, Impressionen</strong></p>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>hikeR Struktur</h2></hgroup><article  id="hiker-struktur">
+
+</article></slide><slide class=""><hgroup><h2>Was ist Shiny ?</h2></hgroup><article  id="was-ist-shiny">
+
+<ul class = 'build'>
+<li>R-Package für das entwickeln von interactiven Standalone Apps</li>
+<li>Kombiniert die stat./numerische Vorzüge von R mit interaktiven Elementen</li>
+<li>erweiterbar/ integriebar mit R-Markdown, CSS, HTML und JS</li>
+<li>Backend + Frontend in R – Einsteigerfreundlich
+
+<ul class = 'build'>
+<li><strong><em>shiny.rstudio.com</em></strong> <font size="4"></li>
+</ul></li>
+<li><strong>Beispiel:</strong> <a href='https://shiny.rstudio.com/gallery/' title=''>https://shiny.rstudio.com/gallery/</a></li>
+<li><strong>Tutorials:</strong> <a href='https://shiny.rstudio.com/tutorial/' title=''>https://shiny.rstudio.com/tutorial/</a></li>
+</ul>
+
+<p></font></p>
+
+<p><img src="https://cdn.auth0.com/blog/shiny-server-2/logo.png" width="150px" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Warum ist R/Shiny ?</h2></hgroup><article  id="warum-ist-rshiny">
+
+<h3>JS und numerische Operationen</h3>
+
+<pre class = 'prettyprint lang-js'>&#39;5&#39; + 3     // &#39;53&#39;
+&#39;5&#39; - 3     // 2
+1+&#39;1&#39; - &#39;1&#39; // 10
+sum(2,2) // TypeError
+[6,-2,-7].sort() // [-2,-7, 6]</pre>
+
+<img src='https://cdn-images-1.medium.com/max/800/1*gSz8xcZE2UPd70CPYtoUZg.gif' title=''/>
+
+</article></slide><slide class=""><hgroup><h2>Warum R/Shiny ?</h2></hgroup><article  id="warum-rshiny">
+
+<h3>Offene Software R:</h3>
+
+<ul class = 'build'>
+<li>spatial libraries: SF,Leaflet, MapView, RGEOS
+
+<ul class = 'build'>
+<li><strong>r-spatial.org</strong></li>
+</ul></li>
+<li>visual libraries: ggplot, plotly, shinydashboards</li>
+<li>Data Handling: tidyverse, data.table
+
+<ul class = 'build'>
+<li><strong>tidyverse.org</strong></li>
+</ul></li>
+<li>services libraries: stplanr, openrouteservice-r, weatherr</li>
+<li>WebDev (ShinyApp) kurze Entwicklungszeit , R-only</li>
+<li>→ Shiny erleichtert Einstiegshürde</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Struktur</h2></hgroup><article  id="struktur">
+
+<h3>R-Pakete + ShinyApp</h3>
+
+<p><br> <img src="https://raw.githubusercontent.com/EricKrg/hikeR/f6a90d66e7c5bea2b2c33a0ae8179edca05436a1/hikeR_structure.png" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Warum R/Shiny ?</h2></hgroup><article  id="warum-rshiny-1">
+
+<ul class = 'build'>
+<li><strong>Spaß am programmiere</strong></li>
+<li>Was ist möglich mit R/Shiny → welche GIS-Fähigkeiten gibt es?</li>
+<li>kontinuierlich gewachsen</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Ausblick</h2></hgroup><article  id="ausblick-1">
+
+<ul class = 'build'>
+<li><strong>Neue Features:</strong>
+
+<ul class = 'build'>
+<li>Routenhistory (Session basiert)</li>
+<li>Autom. Rundtouren</li>
+<li>Wegplan als PDF</li>
+<li>…</li>
+</ul></li>
+<li><strong>System</strong>
+
+<ul class = 'build'>
+<li>neuer Server – Dockerisierung der Anwendung</li>
+<li>Modularisierung fortsetzen</li>
+<li>Code review – überarbeiten/ verbesseren</li>
+<li>Dokumentation</li>
+<li><em>Wartung</em></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Zusammenarbeiten</h2></hgroup><article  id="zusammenarbeiten">
+
+<ul class = 'build'>
+<li><strong><em>Hilfe/ Ideen / Unterstützung jeglicher Art erwünscht!</em></strong></li>
+<li>Zusammenarbeit über github: <strong>github.com/EricKrg/hikeR</strong></li>
+<li>forken –&gt; pull request</li>
+<li>oder bei Interesse: <a href='mailto:eric.krueger@uni-jena.de' title=''>eric.krueger@uni-jena.de</a></li>
+</ul>
+
+<p><br> <img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="200px" /></p>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Danke für die Aufmerksamkeit!</h2></hgroup><article  id="danke-fur-die-aufmerksamkeit">
+
+<p>Fragen ?</p></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
