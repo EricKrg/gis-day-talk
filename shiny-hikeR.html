@@ -138,39 +138,41 @@
 <li>Server + Maintaince</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features">
+</article></slide><slide class=""><hgroup><h2>hikeR Feature-Übersicht</h2></hgroup><article  id="hiker-feature-ubersicht">
 
 <ul class = 'build'>
-<li><strong>Routing</strong>
+<li><strong>Routing</strong> – <strong><em>Feb/März 2018</em></strong>
 
 <ul class = 'build'>
-<li>Routing Stats.</li>
-<li>Download</li>
-<li>Anbieter/Style</li>
+<li>Routing-Statistiken – <strong><em>März</em></strong></li>
+<li>Download – KML/GPX – <strong><em>April</em></strong></li>
+<li>Anbieter/Style – <strong><em>April</em></strong></li>
 </ul></li>
-<li><strong>Wetter</strong>
+<li><strong>Wetter</strong> – <strong><em>März - Mai</em></strong>
 
 <ul class = 'build'>
 <li>Wetter &amp; Wetterwarnungen</li>
 </ul></li>
-<li><strong>InReach</strong></li>
-<li><em>Impressions</em></li>
+<li><strong>hikeR - Paket</strong> <strong><em>Mai</em></strong></li>
+<li><strong>InReach</strong> – <strong><em>Mai</em></strong></li>
+<li><em>Impressions</em> – <strong><em>Juni</em></strong></li>
+<li>→ GIS-Hackathon Erfurt – <strong>Juni</strong></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-1">
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features">
 
 <p><img src="shiny-hikeR_files/figure-html/unnamed-chunk-1-1.png" width="960" style="display: block; margin: auto;" /></p>
 
-</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-2">
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-1">
 
-<h3>Routing</h3>
+<h3>Routing - Anbieter/APIs</h3>
 
 <ul class = 'build'>
 <li><strong>ORS- OpenRouteService <em>openrouteservice.org</em> </strong>
 
 <ul class = 'build'>
 <li>Heidelberg Institute for Geoinformation Technology (HeiGIT) (Entwicklung und Betreuung)</li>
-<li><em>Directions, geocode, isochrones, time-distance matrix, pois</em></li>
+<li><em><strong>Directions, geocode, isochrones,</strong> time-distance matrix, pois</em></li>
 <li>R-Paket: <code>openrouteserivce-r</code> - <em>github.com/GIScience/openrouteservice-r</em></li>
 </ul></li>
 <li><strong>cyclestreet <em>cyclestreets.net</em> </strong>
@@ -178,13 +180,13 @@
 <ul class = 'build'>
 <li>CycleStreets Ltd, a not-for-profit limited UK company - Cambridige Cycling Campaign</li>
 <li>OSM + OpenCycleMap</li>
-<li>R-Paket <code>stplanr</code> - <em><a href='https://github.com/ropensci/stplanr' title=''>https://github.com/ropensci/stplanr</a></em> -&gt; <em>Directions, geocode</em></li>
+<li>R-Paket <code>stplanr</code> - <em>github.com/ropensci/stplanr</em> -&gt; <em>Directions, geocode</em></li>
 </ul></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-3">
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-2">
 
-<h3>Routing</h3>
+<h3>Routing - Style</h3>
 
 <ul class = 'build'>
 <li><em>profile ?</em>
@@ -197,11 +199,10 @@
 <li>hiking, walking (<em>ors</em>)</li>
 </ul></li>
 <li>als Standard auch OSM möglich</li>
+<li><pre class = 'prettyprint lang-r'>hike_routing(coord_list, progress, provider, profile,api)</pre></li>
 </ul>
 
-<p><code>hikeR::hike_routing(coord_list, progress, provider, profile,api)</code></p>
-
-</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-4">
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-3">
 
 <h3>Routing Statistik</h3>
 
@@ -218,6 +219,17 @@
 \[LKM = Hdist+ \frac{UP}{100} + \frac{DOWN}{150}\]</li>
 </ul>
 
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-4">
+
+<h3>Wie erstelle Ich eine Strecke ?</h3>
+
+<ul class = 'build'>
+<li>Auf Karte einzeichen – Von Adresse zu Adresse mit Wegpunkten</li>
+<li>Luftlinie – Routing (Route: ON/OFF)</li>
+<li></li>
+<li><img src='images/FmJKcVP0tY.png' title=''/></li>
+</ul>
+
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Demo</h2></hgroup><article  id="demo">
 
 <p><strong>Routing und Routingstatistik</strong></p>
@@ -232,7 +244,7 @@
 <li><strong>Einfaches Wetter:</strong>
 
 <ul class = 'build'>
-<li><code>weatherr</code> - Paket (api.met.no)</li>
+<li><code>weatherr</code> - Paket (<em>api.met.no</em>)</li>
 <li>weltweit verfügbare Grundwetterdaten von <em>Norwegian Meteorologisk Institutt</em></li>
 <li>Update: nach Erstellung Luftlinie, Route oder Suche</li>
 </ul></li>
@@ -275,6 +287,17 @@ quiet = T)</pre>
 
 <p></font></p>
 
+</article></slide><slide class=""><hgroup><h2>hikeR Features</h2></hgroup><article  id="hiker-features-7">
+
+<h3>Wie bekomme ich InReach/Impressionen/Wetter ?</h3>
+
+<ul class = 'build'>
+<li>Suche/ Strecke erstellen</li>
+<li>InReach Kartenfenster – InReachOptionen</li>
+<li></li>
+<li><img src='images/Auswahl_009.png' title=''/></li>
+</ul>
+
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Demo</h2></hgroup><article  id="demo-1">
 
 <p><strong>Wetter, InReach, Impressionen</strong></p>
@@ -300,18 +323,6 @@ quiet = T)</pre>
 
 <p><img src="https://cdn.auth0.com/blog/shiny-server-2/logo.png" width="150px" /></p>
 
-</article></slide><slide class=""><hgroup><h2>Warum ist R/Shiny ?</h2></hgroup><article  id="warum-ist-rshiny">
-
-<h3>JS und numerische Operationen</h3>
-
-<pre class = 'prettyprint lang-js'>&#39;5&#39; + 3     // &#39;53&#39;
-&#39;5&#39; - 3     // 2
-1+&#39;1&#39; - &#39;1&#39; // 10
-sum(2,2) // TypeError
-[6,-2,-7].sort() // [-2,-7, 6]</pre>
-
-<img src='https://cdn-images-1.medium.com/max/800/1*gSz8xcZE2UPd70CPYtoUZg.gif' title=''/>
-
 </article></slide><slide class=""><hgroup><h2>Warum R/Shiny ?</h2></hgroup><article  id="warum-rshiny">
 
 <h3>Offene Software R:</h3>
@@ -330,7 +341,7 @@ sum(2,2) // TypeError
 </ul></li>
 <li>services libraries: stplanr, openrouteservice-r, weatherr</li>
 <li>WebDev (ShinyApp) kurze Entwicklungszeit , R-only</li>
-<li>→ Shiny erleichtert Einstiegshürde</li>
+<li>→ Shiny erleichtert Einstiegshürde → <strong>Visualisierung, GIS-Operationen, Data-Handling</strong></li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Struktur</h2></hgroup><article  id="struktur">
@@ -342,8 +353,10 @@ sum(2,2) // TypeError
 </article></slide><slide class=""><hgroup><h2>Warum R/Shiny ?</h2></hgroup><article  id="warum-rshiny-1">
 
 <ul class = 'build'>
-<li><strong>Spaß am programmiere</strong></li>
+<li><strong>Spaß am programmieren</strong></li>
 <li>Was ist möglich mit R/Shiny → welche GIS-Fähigkeiten gibt es?</li>
+<li>Was ist mit OpenData/OpenSource möglich</li>
+<li>Alternative mit breiter Auswahl an Funktionen</li>
 <li>kontinuierlich gewachsen</li>
 </ul>
 
@@ -380,9 +393,29 @@ sum(2,2) // TypeError
 
 <p><br> <img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="200px" /></p>
 
+</article></slide><slide class=""><hgroup><h2>Links zur Anwendung</h2></hgroup><article  id="links-zur-anwendung">
+
+<p><a href='http://mccoy.geogr.uni-jena.de:3838/eric/hikeR/' title=''>http://mccoy.geogr.uni-jena.de:3838/eric/hikeR/</a></p>
+
+<p><strong>oder</strong></p>
+
+<p><a href='https://erickrg.shinyapps.io/hikeR/' title=''>https://erickrg.shinyapps.io/hikeR/</a></p>
+
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Danke für die Aufmerksamkeit!</h2></hgroup><article  id="danke-fur-die-aufmerksamkeit">
 
-<p>Fragen ?</p></article></slide>
+<p>Fragen ?</p>
+
+</article></slide><slide class=""><hgroup><h2>Warum R/Shiny ?</h2></hgroup><article  id="warum-rshiny-2">
+
+<h3>JS und numerische Operationen</h3>
+
+<pre class = 'prettyprint lang-js'>&#39;5&#39; + 3     // &#39;53&#39;
+&#39;5&#39; - 3     // 2
+1+&#39;1&#39; - &#39;1&#39; // 10
+sum(2,2) // TypeError
+[6,-2,-7].sort() // [-2,-7, 6]</pre>
+
+<img src='https://cdn-images-1.medium.com/max/800/1*gSz8xcZE2UPd70CPYtoUZg.gif' title=''/></article></slide>
 
 
   <slide class="backdrop"></slide>

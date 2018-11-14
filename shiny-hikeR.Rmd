@@ -34,16 +34,18 @@ output:
 - Neue Features 
 - Server + Maintaince
 
-## hikeR Features
+## hikeR Feature-Übersicht
 
-- **Routing**
-  + Routing Stats.
-  + Download
-  + Anbieter/Style
-- **Wetter**
+- **Routing** -- ***Feb/März 2018***
+  + Routing-Statistiken -- ***März***
+  + Download -- KML/GPX -- ***April***
+  + Anbieter/Style -- ***April***
+- **Wetter** -- ***März - Mai***
   + Wetter & Wetterwarnungen 
-- **InReach**
-- *Impressions*
+- **hikeR - Paket** ***Mai***
+- **InReach** -- ***Mai***
+- *Impressions* -- ***Juni***
+- →  GIS-Hackathon Erfurt -- **Juni**
 
 ## hikeR Features
 
@@ -66,22 +68,22 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
 
 ## hikeR Features
 
-### Routing
+### Routing - Anbieter/APIs
 
 - **ORS- OpenRouteService *openrouteservice.org* **
   +  Heidelberg Institute for Geoinformation Technology (HeiGIT) (Entwicklung und Betreuung)
-  +  *Directions, geocode, isochrones, time-distance matrix, pois*
+  +  ***Directions, geocode, isochrones,** time-distance matrix, pois*
   +  R-Paket: `openrouteserivce-r` - *github.com/GIScience/openrouteservice-r*
 
 - **cyclestreet *cyclestreets.net* **
   + CycleStreets Ltd, a not-for-profit limited UK company - Cambridige Cycling Campaign 
   + OSM + OpenCycleMap
-  + R-Paket `stplanr` - *https://github.com/ropensci/stplanr* -> *Directions, geocode*
+  + R-Paket `stplanr` - *github.com/ropensci/stplanr* -> *Directions, geocode*
   
 
 ## hikeR Features
 
-### Routing
+### Routing - Style
 
 - *profile ?*  
   + **Fahrrad:**
@@ -91,8 +93,10 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
   + hiking, walking (*ors*)
 
 - als Standard auch OSM möglich
-
-`hikeR::hike_routing(coord_list, progress, provider, profile,api)`
+- 
+  ```{r, eval=FALSE}
+  hike_routing(coord_list, progress, provider, profile,api)
+  ```
 
 ## hikeR Features
 
@@ -103,9 +107,18 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
 - Reisezeit
 - Leistungskilometer:
   + `hike_performance_km(elev_points, col, tmp_route)`
-
+  
   $$LKM = Hdist+ \frac{UP}{100} + \frac{DOWN}{150}$$
 
+
+## hikeR Features 
+
+### Wie erstelle Ich eine Strecke ?
+
+- Auf Karte einzeichen -- Von Adresse zu Adresse mit Wegpunkten 
+- Luftlinie -- Routing (Route: ON/OFF)
+-
+- ![](images/FmJKcVP0tY.png)
 
 
 # Demo
@@ -119,7 +132,7 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
 <font size="4">  
 
 - **Einfaches Wetter:**
-  + `weatherr` - Paket (api.met.no)
+  + `weatherr` - Paket (*api.met.no*)
   + weltweit verfügbare Grundwetterdaten von *Norwegian Meteorologisk Institutt*
   + Update: nach Erstellung Luftlinie, Route oder Suche
 
@@ -163,6 +176,17 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
   
 </font>
 
+## hikeR Features 
+
+### Wie bekomme ich InReach/Impressionen/Wetter ?
+
+- Suche/ Strecke erstellen 
+- InReach Kartenfenster -- InReachOptionen
+-
+- ![](images/Auswahl_009.png)
+
+
+
 # Demo
 
 **Wetter, InReach, Impressionen**
@@ -185,18 +209,6 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
 
 <img src="https://cdn.auth0.com/blog/shiny-server-2/logo.png" width="150px" />
 
-## Warum ist R/Shiny ?
-
-### JS und numerische Operationen
-```js
-'5' + 3     // '53'
-'5' - 3     // 2
-1+'1' - '1' // 10
-sum(2,2) // TypeError
-[6,-2,-7].sort() // [-2,-7, 6]
-```
-![](https://cdn-images-1.medium.com/max/800/1*gSz8xcZE2UPd70CPYtoUZg.gif)
-
 ## Warum R/Shiny ?
 
 ### Offene Software R:
@@ -207,7 +219,7 @@ sum(2,2) // TypeError
   + **tidyverse.org**
 - services libraries: stplanr, openrouteservice-r, weatherr
 - WebDev (ShinyApp) kurze Entwicklungszeit , R-only
-- → Shiny erleichtert Einstiegshürde 
+- → Shiny erleichtert Einstiegshürde →  **Visualisierung, GIS-Operationen, Data-Handling**
 
 ## Struktur
 
@@ -218,8 +230,10 @@ sum(2,2) // TypeError
 
 ## Warum R/Shiny ?
 
-- **Spaß am programmiere**
+- **Spaß am programmieren**
 - Was ist möglich mit R/Shiny →  welche GIS-Fähigkeiten gibt es?
+- Was ist mit OpenData/OpenSource möglich
+- Alternative mit breiter Auswahl an Funktionen 
 - kontinuierlich gewachsen
 
 
@@ -249,6 +263,29 @@ sum(2,2) // TypeError
 <img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="200px" />
 
 
+## Links zur Anwendung
+
+http://mccoy.geogr.uni-jena.de:3838/eric/hikeR/  
+
+  **oder**  
+  
+https://erickrg.shinyapps.io/hikeR/
+
+
+
 # Danke für die Aufmerksamkeit!
 
 Fragen ?
+
+
+## Warum R/Shiny ?
+
+### JS und numerische Operationen
+```js
+'5' + 3     // '53'
+'5' - 3     // 2
+1+'1' - '1' // 10
+sum(2,2) // TypeError
+[6,-2,-7].sort() // [-2,-7, 6]
+```
+![](https://cdn-images-1.medium.com/max/800/1*gSz8xcZE2UPd70CPYtoUZg.gif)
