@@ -1,3 +1,3 @@
 # GIS Day Talk: hikeR
 
-A presentation about the [hikeR-ShinyApp](www.github.com/EricKrg/hikeR)
+A presentation about the [hikeR-ShinyApp](https://github.com/EricKrg/hikeR)
