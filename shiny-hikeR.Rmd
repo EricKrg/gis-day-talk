@@ -102,6 +102,8 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
 
 ### Routing Statistik
 
+<font size=4>
+
 - Luftlinie oder berechnete Strecke
 - Höheninformation + 3D Höhendiagramm
 - Reisezeit
@@ -109,6 +111,17 @@ comb2pngs(c("images/Auswahl_004.png","images/height.png","images/routing.PNG","i
   + `hike_performance_km(elev_points, col, tmp_route)`
   
   $$LKM = Hdist+ \frac{UP}{100} + \frac{DOWN}{150}$$
+  
+</font>
+
+  <font size = 3>
+
+  + | Art      |    + 1km                                      |
+    |----------|-----------------------------------------------|
+    | Steigung |	pro 100 Meter Höhendifferenz rechnet         |
+    | Gefälle  | pro 150 Meter Höhendifferenz über 20 % Gefälle|
+
+  </font>
 
 
 ## hikeR Features 
